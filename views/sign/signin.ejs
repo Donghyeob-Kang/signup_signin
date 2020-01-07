@@ -1,8 +1,10 @@
 <%- contentFor('body') %>
-<h1>Sign In page</h1>
-<form action="" style="float: left;">
-    <label>id <input type="text" value="id"/></label>
-    <label>password <input type="password"/></label>
+<h1>Sign-in page</h1>
+<form action="/sign/signin" method="POST" style="float: left;">
+    <label>id <input type="text" name="id" placeholder="id"/></label>
+    <label
+        >password <input type="password" name="pwd" placeholder="password"
+    /></label>
     <button>signin</button>
 </form>
 <button

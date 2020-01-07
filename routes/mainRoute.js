@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const jsonParser = express.json();
+const authHandler = require('../services/authHandler');
 
-router.get('/', (req, res) => {
+router.get('/', authHandler.signAuth, (req, res) => {
     res.render('main/main');
 });
 

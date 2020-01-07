@@ -4,6 +4,8 @@ const http = require('http').Server(app);
 const expressLayouts = require('express-ejs-layouts');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
+const passport = require('passport');
+const passportConfig = require('./services/passport');
 require('dotenv').config();
 
 app.set('views', __dirname + '/views');
@@ -25,6 +27,12 @@ app.use(
         name: 'vassili web server'
     })
 );
+app.use(passport.initialize());
+app.use(passport.session());
+passportConfig(passport);
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 app.use('/static', express.static(__dirname + '/public'));
 
