@@ -1,9 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const jsonParser = express.json();
 
 router.get('/', (req, res) => {
-    res.render('main/main');
+    res.render('sign/signin');
+});
+
+router.get('/signup', (req, res) => {
+    res.render('sign/signup');
 });
 
 module.exports = router;

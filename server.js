@@ -4,13 +4,12 @@ const http = require('http').Server(app);
 const expressLayouts = require('express-ejs-layouts');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
-const ejs = require('ejs');
 require('dotenv').config();
 
 app.set('views', __dirname + '/views');
-app.set('view engine', ejs);
+app.set('view engine', 'ejs');
 
-app.set('layout', 'views/layout');
+app.set('layout', 'layout');
 app.set('layout extractScripts', true);
 app.use(expressLayouts);
 app.use(cookieParser(process.env.COOKIE_SECRET));
@@ -30,9 +29,11 @@ app.use(
 app.use('/static', express.static(__dirname + '/public'));
 
 const mainRoute = require('./routes/mainRoute');
+const signRoute = require('./routes/signRoute');
 
 app.use('/', mainRoute);
+app.use('/sign', signRoute);
 
-http.listen(9504, () => {
+http.listen(5545, () => {
     console.log('http server start');
 });
