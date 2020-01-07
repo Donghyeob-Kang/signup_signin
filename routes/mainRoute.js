@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const authHandler = require('../services/authHandler');
 
-router.get('/', authHandler.signAuth, (req, res) => {
+router.get('/', authHandler.ensureAuth, (req, res) => {
     res.render('main/main');
 });
 

@@ -1,0 +1,13 @@
+<%- contentFor('body') %>
+<h1>Sign-up page</h1>
+<form action="/sign/signup" method="POST" style="float: left;">
+    <label>id <input type="text" name="id" placeholder="id"/></label>
+    <label
+        >password <input type="password" name="pwd" placeholder="password"
+    /></label>
+    <label>name <input type="text" name="name" placeholder="name"/></label>
+    <button>signup</button>
+</form>
+<button type="button" onclick="javascript:history.back()" style="float: left;">
+    back
+</button>
