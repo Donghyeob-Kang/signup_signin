@@ -1,0 +1,29 @@
+{
+  "name": "signup_signin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Donghyeob-Kang/signup_signin.git"
+  },
+  "author": "vassili",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Donghyeob-Kang/signup_signin/issues"
+  },
+  "homepage": "https://github.com/Donghyeob-Kang/signup_signin#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-session": "^1.17.0",
+    "nodemailer": "^6.4.2"
+  }
+}
